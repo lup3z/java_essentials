@@ -21,6 +21,21 @@ public class Input {
 		return retInt;
 	}
 
+	public static long get_long() {
+		Long retInt = Long.MAX_VALUE;
+		while(retInt.equals(Long.MAX_VALUE)) {
+			try {
+				long i = sc.nextLong();
+				retInt = i;
+			}catch(InputMismatchException ime) {
+				System.out.println("Wrong format for long integer. input a correct long integer: ");
+				sc = new Scanner(System.in);
+			}
+		}
+		return retInt;
+	}
+
+
 	public static float get_float() {
 		Float retFloat = Float.MAX_VALUE;
 		while(retFloat.equals(Float.MAX_VALUE)) {
